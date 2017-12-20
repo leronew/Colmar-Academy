@@ -1,0 +1,88 @@
+html{
+	font-size: 16px;
+}
+
+.flex{
+	display: flex;
+}
+
+header{
+	border-bottom: 1px solid cadetblue;
+	justify-content: space-between;
+	width: 100%;
+	height: 4rem;
+}
+
+#logo{
+	margin-left: 1.5rem;
+}
+
+nav ul{
+	margin: auto 1.5rem;
+}
+
+nav li{
+	list-style: none;
+	margin-left: 1rem;
+	font-family: Roboto, sans-serif;
+}
+
+.university span{
+	align-self: center;
+	font-family: 'Montserrat', cursive;
+}
+
+nav, header, .university{
+}
+
+.banner{
+	background-color: lightgrey;
+	width: 100%;
+}
+
+.image-wrapper{
+	width: 60%;
+}
+
+.large-image{
+	margin: 2rem 1.5rem;
+	border: 1px solid red;
+	width: 100%;
+}
+
+.banner-image{
+	border: 1px solid green;
+}
+
+.catchphrase-div{
+	flex-direction: column;
+	border: 1px solid red;
+	max-width: 30%;
+	margin: auto;
+}
+
+.catchphrase-div h1{
+	font-size: 2rem;
+}
+
+.main, .academy{
+	flex-direction: column;
+}
+
+.academy{
+	width: 40%;
+}
+
+.small-image{
+	width: 35%;
+	height: auto;
+}
+
+.academy-info{
+	width: 65%;
+	flex-direction: column;
+}
+
+.main{
+	width: 60%;
+}
