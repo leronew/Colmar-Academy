@@ -11,8 +11,9 @@ html{
 	display: flex;
 }
 
-.desktop{
-	border-bottom: 1px solid cadetblue;
+.desktop-header{
+	display: flex;
+	border-bottom: 1px solid #07EAE7;
 	justify-content: space-between;
 	width: 100%;
 	height: 4rem;
@@ -20,7 +21,7 @@ html{
 	border-bottom-right-radius: 2.5rem;
 }
 
-.mobile{
+.mobile, .mobile-header{
 	display: none;
 }
 
@@ -29,17 +30,23 @@ html{
 	margin: auto;
 }
 
-.company{
-	border: 1px solid blue;
-}
 
 #logo{
-	margin-left: 1.5rem;
+	margin: auto auto auto 1.5rem;
+	width: 2rem;
 }
 
 #name{
-	font-family: 'Montserrat', cursive;
+	margin: auto;
+	font-size: 1.5rem;
+	font-weight: 900;
+	letter-spacing: 5px;
 	align-self: center;
+	font-family: 'Exo 2', 'Lato', cursive;	
+}
+
+#name2{
+	color: #07EAE7;
 }
 
 nav{
@@ -50,7 +57,7 @@ li{
 	list-style: none;
 	display: inline;
 	margin-left: 1rem;
-	font-family: Roboto, sans-serif;
+	font-family: Roboto Slab, sans-serif;
 }
 
 .image-wrapper{
@@ -61,50 +68,60 @@ li{
 .right-side{
 	flex-direction: column;
 	width: 40%;
-	font-family: 'Montserrat', cursive;
+	padding-top: 1rem;
+}
+
+#third-right .academy{
+	border: hidden;
 }
 
 #first-right {
 	margin: auto;
 }	
 	
-.right-side h1{
-	font-size: 2rem;
+.motto{
+	margin: 2rem 0 1.5rem;
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+
+.info{
+	font-family: 'Lato', cursive;
+	font-size: 1.3rem;
 	width: 70%;
 }
 
-.right-side p{
-	font-size: 1rem;
-	width: 70%;
+.curriculum{
+	padding: 1rem 0;	
+}
+
+#quote{
+	width: 100%;
+	margin-bottom: 1.5rem;
+}
+
+#signature{
+	font-size: 0.9rem;
 }
 
 #start-btn{
 	font-size: 1rem;
 	width: 70%;
 	margin: 2rem 0;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 40px;
-	border-bottom-left-radius: 40px;
-	border-bottom-right-radius: 20px;
+	border-radius: 20px;
 	color: #fff;
 	background-color: #0EA78D;
-	padding: 0.5rem;
+	padding: 0.8rem;
 }
 
-#second-right{
+.academy{
+	flex-direction: row;
 	border-left: 1px solid cadetblue;
-	justify-content: space-between;
-	padding-top: 1rem;
 }
 
-.two{
+.borders{
 	border-top: 1px solid cadetblue;
 	border-bottom: 1px solid cadetblue;
-}
-
-.main{
-	padding: 2rem 1.5rem;
-	width: 60%;
 }
 
 .large-image{
@@ -113,10 +130,6 @@ li{
 
 .banner{
 	margin-bottom: 1rem;
-}
-
-.main, .academy{
-	flex-direction: column;
 }
 
 .mobile-show{
@@ -133,38 +146,50 @@ li{
 	width: 100%;
 }
 
-.academy{
-	flex-direction: row;
-}
-
 .academy:hover{
 	background-color: #07EAE7;
 	cursor: pointer;
 }
 
-.academy-info{
-	width: 65%;
+.description{
 	flex-direction: column;
-	margin-left: 1rem;
-	margin: auto;
+	margin: auto 1rem auto 0;
 }
 
-.academy-info p, a{
-	font-size: 0.8rem;
-	margin-top: -0.5rem;
+.academy .description{
+	width: 65%;
+}
+
+.course .descritpion{
+	width: 100%;
+}
+
+.topic{
+	display: block;
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-bottom: 0.9rem;
+}
+
+.description p, a{
+	font-size: 0.9rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	font-family: Roboto Slab, sans-serif;
+}
+
+.course .description{
+	padding-left: 1rem;
+	line-height: 1.6rem;
 }
 
 .links{
 	text-decoration: none;
+	color: #044af9;
 }
 
-
-.title{
+#thesis, #learning{
 	text-align: center;
-	padding: 1rem 0 0;
-}
-
-#learning{
 }
 
 .all-courses{
@@ -182,23 +207,20 @@ li{
 .course img{
 	width: 100%;
 	height: auto;
+	margin-bottom: 1rem;
 }
 
-.description{
-	margin: 1rem;
-}
 
 .courses{
-	margin: 0.5rem 0;
+	margin: 2rem 0;
+	font-weight: 500;
+	color: #092044;
 }
 
 video{
 	width: 100%;
 }
 
-#third-right{
-	padding-top: 1rem;
-}
 
 footer{
 	border-top: 1px solid cadetblue;
@@ -208,21 +230,36 @@ footer{
 	border-top-right-radius: 2.5rem;
 }
 
+.arrow{
+	width: 1.5rem;
+	height: auto;
+	position: fixed;
+	right: 2rem;
+}
+
+#up-arrow{
+	bottom: 8rem;
+}
+
+#down-arrow{
+	bottom: 6.5rem;
+}
+
 #copyright{
 	font-family: Roboto, sans-serif;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-	.desktop{
-		display: none;
-	}
+@media only screen and (min-width : 320px) and (max-width : 736px) {
 	
 	.mobile{
 		display: flex;
 		justify-content: space-between;
 		height: 4rem;
-		border: 1px solid red;
+	}
+	
+	#start-btn{
+		width: 90%;
 	}
 	
 	.banner{
@@ -240,17 +277,77 @@ footer{
 		padding:0;
 	}
 	
+	.curriculum{
+		background: #E6FEFA;
+	}
+	
+ .mobile-show{
+		display: block;
+	}
+	
+	.mobile-show .course{
+		padding: 1rem 0 1.5rem 1rem;
+		margin: 0.5rem auto;
+		width: 80%;
+		font-weight: 700;
+		font-size: 1.5rem;
+		background: #07EAE7;
+	}
+	
 	.right-side{
-		width: 100%
+		width: 100%;
 	}
 	
 	.mobile-hide{
 		display:none;
 	}
 	
-	.mobile-show{
-		display: block;
+	.academy{
+		flex-direction: column;
+		margin: 1rem;
+	}
+	
+	.academy:hover{		
+		background-color: #E6FEFA;
+	}
+	
+	.academy .description{
 		width: 100%;
+		font-size: 2rem;
+	}
+	
+	.small{
+		width: 100%;
+		padding: 0;
+	}
+	
+	#info-campus{
+    content:url("../images/information-campus-mobile.jpg");
+  }
+	
+	#info-guest{
+    content:url("../images/information-guest-lecture-mobile.jpg");
+  }
+	
+	#info-orientation{
+    content:url("../images/information-orientation-mobile.jpg");
+  }
+	
+	#second-right{
+	border-bottom: 1px solid #07EAE7;
+	}
+	
+	#first-right{
+	margin: 0 1rem;
+	}
+	
+	.academy, .borders{
+		border: hidden;
 	}
 }
 
+@media only screen and (max-width : 800px) {
+	html{
+		font-size: 12px;
+	}
+}
