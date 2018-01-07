@@ -15,6 +15,8 @@
 </head>
 <body> 
     <header id="header">
+        <!--Header has two sections. 'Mobile' and 'desktop-header'. '
+        Mobile' will be shown only on devices < 736px.-->
         <div class="mobile">
            <img id="logo" src="./resources/images/icons/ic-logo.svg"/>
            <img id="logo" src="./resources/images/icons/ic-on-campus.svg"/>
@@ -24,7 +26,8 @@
         <div class="desktop-header mobile-hide">
             <div class="company flex">
                 <img id="logo" src="./resources/images/icons/ic-logo.svg"/>
-                <span id="name"><strong>COLMAR</strong><span id="name2">ACADEMY</span></span>            
+                <span id="name"><strong>COLMAR</strong><span id="name2">ACADEMY</span></span>
+                <!--The name COLMARACADEMY was slit to allow seperate styling for the both parts.-->           
             </div>
             <nav>
                 <ul>
@@ -35,13 +38,17 @@
                 </ul>
             </nav>
         </div>
-    </header>
-    <div class="mobile-hide">
+    </header> <!--End Header-->
+    
+    <div class="mobile-hide"> <!--Up and down arrows added to help with navigation. Not shown on mobile screens-->
         <a href="#header"><img  class="arrow" id="up-arrow" src="./resources/images/icons/up.png" /></a>
         <a href="#footer"><img  class="arrow" id="down-arrow" src="./resources/images/icons/down.png" /></a>
     </div>
-    <div class="main-wrapper">
-        <div class="banner background flex">
+    
+    <div class="main-wrapper"> <!--Everything wrapped in this div except header, navigation arrows and footer-->
+    
+        <div class="banner background flex"> <!--Instead of repeating display: flex throughout the stylesheet,
+        a class called flex is created then styled once in the stylesheet.-->
             <div class="image-wrapper">
                 <img class="large-image" src="./resources/images/banner.jpg" />           
             </div>
@@ -66,7 +73,8 @@
             <div class="flex right-side" id="second-right">
                 <div class="flex academy">
                     <div class="small">
-                        <img class="small-image" id="info-orientation" src="./resources/images/information-orientation.jpg" />
+                        <img class="small-image" id="info-orientation"
+                             src="./resources/images/information-orientation.jpg" />
                     </div>
                     <div class="description">
                         <span class="topic">Orientation date</span>
@@ -74,9 +82,10 @@
                         <a class="links" id="dates" href="#">Read more</a>
                     </div>
                 </div>
-                <div class="flex academy borders">
+                <div class="flex academy add-borders">
                     <div class="small">
-                        <img class="small-image" id="info-campus" src="./resources/images/information-campus.jpg" />
+                        <img class="small-image" id="info-campus"
+                             src="./resources/images/information-campus.jpg" />
                     </div>
                     <div class=" description">
                         <span class="topic">Our campus</span>
@@ -86,7 +95,8 @@
                 </div>
                 <div class="flex academy ">
                     <div class="small">
-                        <img class="small-image" id="info-guest" src="./resources/images/information-guest-lecture.jpg" />
+                        <img class="small-image" id="info-guest"
+                             src="./resources/images/information-guest-lecture.jpg" />
                     </div>
                     <div class=" description">
                         <span class="topic">Our guest lecturer</span>
@@ -96,11 +106,13 @@
                 </div>
             </div>
         </div>
-        <div class="curriculum background">
+        
+        <div class="curriculum background"> <!--Curriculum split in two sections. One for mobile. One for desktop-->
             <div>
                 <h1 class="motto" id="learning">Start learning</h1>
             </div>
-            <div class="mobile-show flex">
+            <div class="mobile-show flex"> <!--Created to replace the
+            "<div class="image-wrapper mobile-hide">" on mobile screens.-->
                <div class="course">
                     <h2>Software engineering</h2>
                 </div>
@@ -120,7 +132,10 @@
                    <h2>Marketing</h2>
                </div>
             </div>
-            <div class="all-courses mobile-hide flex">
+            <div class="all-courses mobile-hide flex"> <!--There are two all-courses sections to allow
+                for easily laying out the courses (3 per row). I had difficulty combining them
+                and using flexbox to get them to flow as they should.
+                A grid system should work better here than flexbox. Will combine later and use bootstrap or CSS grid.-->
                 <div class="course" id="engineer">
                     <img src="./resources/images/course-software.jpg" />
                     <div class="description">
@@ -147,7 +162,8 @@
                     </div> 
                 </div>
             </div>
-            <div class="all-courses mobile-hide flex">
+            
+            <div class="all-courses mobile-hide flex"> <!--Second row of courses-->
                 <div class="course" id="data">
                     <img src="./resources/images/course-data.jpg" />    
                     <div class="description">
@@ -173,11 +189,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!--End curriculum and list of courses-->
+        
         <div id="thesis">
             <h1 class="motto">Thesis exhibit</h1>
         </div>
-        <div class="flex">
+        <div class="flex"> <!--Section with video-->
             <div class="image-wrapper">
                 <div class="banner">
                     <video autoplay loop>
@@ -214,7 +231,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> <!--End main-wrapper-->
     
     <footer id="footer" class="flex">
         <span id="copyright">&copy; Colmar University. All rights reserved</span>
