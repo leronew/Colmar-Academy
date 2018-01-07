@@ -4,7 +4,7 @@ html{
 }
 
 .background{
-	background-color: #07EAE7;	
+	background-color: #d9f442;	
 }
 
 .flex{
@@ -21,7 +21,7 @@ html{
 	border-bottom-right-radius: 2.5rem;
 }
 
-.mobile, .mobile-header{
+.mobile{
 	display: none;
 }
 
@@ -29,7 +29,6 @@ html{
 	width: 80%;
 	margin: auto;
 }
-
 
 #logo{
 	margin: auto auto auto 1.5rem;
@@ -65,19 +64,35 @@ li{
 	padding: 2rem 1.5rem;
 }
 
+#start-btn{
+	font-size: 1rem;
+	width: 70%;
+	margin: 2rem 0;
+	border-radius: 20px;
+	color: #fff;
+	background-color: #0EA78D;
+	padding: 0.8rem;
+}
+
+.academy{
+	flex-direction: row;
+	border-left: 1px solid cadetblue;
+}
+
 .right-side{
 	flex-direction: column;
 	width: 40%;
 	padding-top: 1rem;
 }
 
-#third-right .academy{
-	border: hidden;
-}
-
 #first-right {
 	margin: auto;
-}	
+}
+
+#third-right .academy{ /* Border was added to '.academy' in an earlier rule.
+											  * But the border is not needed under '#third-right'*/
+	border: hidden;
+}
 	
 .motto{
 	margin: 2rem 0 1.5rem;
@@ -104,22 +119,7 @@ li{
 	font-size: 0.9rem;
 }
 
-#start-btn{
-	font-size: 1rem;
-	width: 70%;
-	margin: 2rem 0;
-	border-radius: 20px;
-	color: #fff;
-	background-color: #0EA78D;
-	padding: 0.8rem;
-}
-
-.academy{
-	flex-direction: row;
-	border-left: 1px solid cadetblue;
-}
-
-.borders{
+.add-borders{
 	border-top: 1px solid cadetblue;
 	border-bottom: 1px solid cadetblue;
 }
@@ -198,7 +198,7 @@ li{
 }
 
 .course{
-  width: calc(100% / 3);
+  width: calc(100% / 3); /* Each div in the all-courses section will have equal width */
 	height: auto;
 	margin: 1rem;
 	background-color: #fff;
@@ -221,7 +221,6 @@ video{
 	width: 100%;
 }
 
-
 footer{
 	border-top: 1px solid cadetblue;
 	padding: 2rem 1.5rem;
@@ -230,7 +229,7 @@ footer{
 	border-top-right-radius: 2.5rem;
 }
 
-.arrow{
+.arrow{ /*Navigation arrows*/
 	width: 1.5rem;
 	height: auto;
 	position: fixed;
@@ -243,14 +242,17 @@ footer{
 
 #down-arrow{
 	bottom: 6.5rem;
-}
+} /*End navigation arrows*/
 
 #copyright{
 	font-family: Roboto, sans-serif;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones and tablets */
 @media only screen and (min-width : 320px) and (max-width : 736px) {
+	.mobile-hide{
+		display:none;
+	}
 	
 	.mobile{
 		display: flex;
@@ -298,10 +300,6 @@ footer{
 		width: 100%;
 	}
 	
-	.mobile-hide{
-		display:none;
-	}
-	
 	.academy{
 		flex-direction: column;
 		margin: 1rem;
@@ -321,6 +319,7 @@ footer{
 		padding: 0;
 	}
 	
+	/*The following three rules changes the images in the desktop view*/
 	#info-campus{
     content:url("../images/information-campus-mobile.jpg");
   }
@@ -341,13 +340,15 @@ footer{
 	margin: 0 1rem;
 	}
 	
-	.academy, .borders{
+	.academy, .add-borders{
 		border: hidden;
 	}
 }
 
-/*@media only screen and (max-width : 800px) {
+
+/* The wording for some sections were too big and passed their borders while resizing the page. Hence this media query.*/
+@media only screen and (min-width : 736px) and (max-width: 1036px){
 	html{
 		font-size: 12px;
 	} 
-} */
+} 
