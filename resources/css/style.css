@@ -3,6 +3,21 @@ html{
 	background-color: #E6FEFA;
 }
 
+.arrow{ /*Navigation arrows*/
+	width: 1.5rem;
+	height: auto;
+	position: fixed;
+	right: 2rem;
+}
+
+#up-arrow{
+	bottom: 8rem;
+}
+
+#down-arrow{
+	bottom: 6.5rem;
+} /*End navigation arrows*/
+
 .background{
 	background-color: #d9f442;	
 }
@@ -21,13 +36,8 @@ html{
 	border-bottom-right-radius: 2.5rem;
 }
 
-.mobile{
+.mobile-header{
 	display: none;
-}
-
-.main-wrapper{
-	width: 80%;
-	margin: auto;
 }
 
 #logo{
@@ -52,11 +62,17 @@ nav{
 	margin: auto 1.5rem;
 }
 
-li{
+nav a{
 	list-style: none;
 	display: inline;
 	margin-left: 1rem;
 	font-family: Roboto Slab, sans-serif;
+	text-decoration: none;
+}
+
+.main-wrapper{
+	width: 80%;
+	margin: auto;
 }
 
 .image-wrapper{
@@ -110,9 +126,10 @@ li{
 	padding: 1rem 0;	
 }
 
-#quote{
+.quote{
 	width: 100%;
 	margin-bottom: 1.5rem;
+	font-family: 'Lato', cursive;
 }
 
 #signature{
@@ -148,7 +165,6 @@ li{
 
 .academy:hover{
 	background-color: #07EAE7;
-	cursor: pointer;
 }
 
 .description{
@@ -198,7 +214,7 @@ li{
 }
 
 .course{
-  width: calc(100% / 3); /* Each div in the all-courses section will have equal width */
+  width: calc(100% / 3); /* Each ofthe 3 divs in the course section will have equal width */
 	height: auto;
 	margin: 1rem;
 	background-color: #fff;
@@ -209,7 +225,6 @@ li{
 	height: auto;
 	margin-bottom: 1rem;
 }
-
 
 .courses{
 	margin: 2rem 0;
@@ -229,21 +244,6 @@ footer{
 	border-top-right-radius: 2.5rem;
 }
 
-.arrow{ /*Navigation arrows*/
-	width: 1.5rem;
-	height: auto;
-	position: fixed;
-	right: 2rem;
-}
-
-#up-arrow{
-	bottom: 8rem;
-}
-
-#down-arrow{
-	bottom: 6.5rem;
-} /*End navigation arrows*/
-
 #copyright{
 	font-family: Roboto, sans-serif;
 }
@@ -254,10 +254,12 @@ footer{
 		display:none;
 	}
 	
-	.mobile{
+	.mobile-header{
 		display: flex;
-		justify-content: space-between;
+		align-items: center;
+		justify-content: space-around;
 		height: 4rem;
+		margin-left: -1rem;
 	}
 	
 	#start-btn{
@@ -311,6 +313,15 @@ footer{
 	
 	.academy .description{
 		width: 100%;
+		margin: 1rem;
+	}
+	
+	.academy .description p, a{
+		font-size: 1.2rem;
+		padding-bottom: 1rem;
+	}
+	
+	.topic{
 		font-size: 2rem;
 	}
 	
@@ -346,7 +357,8 @@ footer{
 }
 
 
-/* The wording for some sections were too big and passed their borders while resizing the page. Hence this media query.*/
+/* The wording for some sections were too big and passed their borders while resizing the page.
+Hence this media query.*/
 @media only screen and (min-width : 736px) and (max-width: 1036px){
 	html{
 		font-size: 12px;
