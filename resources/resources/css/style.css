@@ -1,0 +1,366 @@
+html{
+	font-size: 16px;
+	background-color: #E6FEFA;
+}
+
+.arrow{ /*Navigation arrows*/
+	width: 1.5rem;
+	height: auto;
+	position: fixed;
+	right: 2rem;
+}
+
+#up-arrow{
+	bottom: 8rem;
+}
+
+#down-arrow{
+	bottom: 6.5rem;
+} /*End navigation arrows*/
+
+.background{
+	background-color: #d9f442;	
+}
+
+.flex{
+	display: flex;
+}
+
+.desktop-header{
+	display: flex;
+	border-bottom: 1px solid #07EAE7;
+	justify-content: space-between;
+	width: 100%;
+	height: 4rem;
+	border-bottom-left-radius: 2.5rem;
+	border-bottom-right-radius: 2.5rem;
+}
+
+.mobile-header{
+	display: none;
+}
+
+#logo{
+	margin: auto auto auto 1.5rem;
+	width: 2rem;
+}
+
+#name{
+	margin: auto;
+	font-size: 1.5rem;
+	font-weight: 900;
+	letter-spacing: 5px;
+	align-self: center;
+	font-family: 'Exo 2', 'Lato', cursive;	
+}
+
+#name2{
+	color: #07EAE7;
+}
+
+nav{
+	margin: auto 1.5rem;
+}
+
+nav a{
+	list-style: none;
+	display: inline;
+	margin-left: 1rem;
+	font-family: Roboto Slab, sans-serif;
+	text-decoration: none;
+}
+
+.main-wrapper{
+	width: 80%;
+	margin: auto;
+}
+
+.image-wrapper{
+	width: 60%;
+	padding: 2rem 1.5rem;
+}
+
+#start-btn{
+	font-size: 1rem;
+	width: 70%;
+	margin: 2rem 0;
+	border-radius: 20px;
+	color: #fff;
+	background-color: #0EA78D;
+	padding: 0.8rem;
+}
+
+.academy{
+	flex-direction: row;
+	border-left: 1px solid cadetblue;
+}
+
+.right-side{
+	flex-direction: column;
+	width: 40%;
+	padding-top: 1rem;
+}
+
+#first-right {
+	margin: auto;
+}
+
+#third-right .academy{ /* Border was added to '.academy' in an earlier rule.
+											  * But the border is not needed under '#third-right'*/
+	border: hidden;
+}
+	
+.motto{
+	margin: 2rem 0 1.5rem;
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+
+.info{
+	font-family: 'Lato', cursive;
+	font-size: 1.3rem;
+	width: 70%;
+}
+
+.curriculum{
+	padding: 1rem 0;	
+}
+
+.quote{
+	width: 100%;
+	margin-bottom: 1.5rem;
+	font-family: 'Lato', cursive;
+}
+
+#signature{
+	font-size: 0.9rem;
+}
+
+.add-borders{
+	border-top: 1px solid cadetblue;
+	border-bottom: 1px solid cadetblue;
+}
+
+.large-image{
+	width: 100%;
+}
+
+.banner{
+	margin-bottom: 1rem;
+}
+
+.mobile-show{
+	display: none;
+}
+
+.small{
+	width: 35%;
+	height: auto;
+	padding: 1rem;
+}
+
+.small-image{
+	width: 100%;
+}
+
+.academy:hover{
+	background-color: #07EAE7;
+}
+
+.description{
+	flex-direction: column;
+	margin: auto 1rem auto 0;
+}
+
+.academy .description{
+	width: 65%;
+}
+
+.course .descritpion{
+	width: 100%;
+}
+
+.topic{
+	display: block;
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-bottom: 0.9rem;
+}
+
+.description p, a{
+	font-size: 0.9rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	font-family: Roboto Slab, sans-serif;
+}
+
+.course .description{
+	padding-left: 1rem;
+	line-height: 1.6rem;
+}
+
+.links{
+	text-decoration: none;
+	color: #044af9;
+}
+
+#thesis, #learning{
+	text-align: center;
+}
+
+.all-courses{
+	justify-content: space-around;
+	margin: 0 3.5rem;
+}
+
+.course{
+  width: calc(100% / 3); /* Each ofthe 3 divs in the course section will have equal width */
+	height: auto;
+	margin: 1rem;
+	background-color: #fff;
+}
+
+.course img{
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+.courses{
+	margin: 2rem 0;
+	font-weight: 500;
+	color: #092044;
+}
+
+video{
+	width: 100%;
+}
+
+footer{
+	border-top: 1px solid cadetblue;
+	padding: 2rem 1.5rem;
+	justify-content: space-between;
+	border-top-left-radius: 2.5rem;
+	border-top-right-radius: 2.5rem;
+}
+
+#copyright{
+	font-family: Roboto, sans-serif;
+}
+
+/* Smartphones and tablets */
+@media only screen and (min-width : 320px) and (max-width : 736px) {
+	.mobile-hide{
+		display:none;
+	}
+	
+	.mobile-header{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 4rem;
+		margin-left: -1rem;
+	}
+	
+	#start-btn{
+		width: 90%;
+	}
+	
+	.banner{
+		flex-direction: column;
+		width: 100%;
+	}
+	
+	.main-wrapper{
+		width: 100%;
+		margin: 0;
+	}
+	
+	.image-wrapper{
+		width: 100%;
+		padding:0;
+	}
+	
+	.curriculum{
+		background: #E6FEFA;
+	}
+	
+ .mobile-show{
+		display: block;
+	}
+	
+	.mobile-show .course{
+		padding: 1rem 0 1.5rem 1rem;
+		margin: 0.5rem auto;
+		width: 80%;
+		font-weight: 700;
+		font-size: 1.5rem;
+		background: #07EAE7;
+	}
+	
+	.right-side{
+		width: 100%;
+	}
+	
+	.academy{
+		flex-direction: column;
+		margin: 1rem;
+	}
+	
+	.academy:hover{		
+		background-color: #E6FEFA;
+	}
+	
+	.academy .description{
+		width: 100%;
+		margin: 1rem;
+	}
+	
+	.academy .description p, a{
+		font-size: 1.2rem;
+		padding-bottom: 1rem;
+	}
+	
+	.topic{
+		font-size: 2rem;
+	}
+	
+	.small{
+		width: 100%;
+		padding: 0;
+	}
+	
+	/*The following three rules changes the images in the desktop view*/
+	#info-campus{
+    content:url("../images/information-campus-mobile.jpg");
+  }
+	
+	#info-guest{
+    content:url("../images/information-guest-lecture-mobile.jpg");
+  }
+	
+	#info-orientation{
+    content:url("../images/information-orientation-mobile.jpg");
+  }
+	
+	#second-right{
+	border-bottom: 1px solid #07EAE7;
+	}
+	
+	#first-right{
+	margin: 0 1rem;
+	}
+	
+	.academy, .add-borders{
+		border: hidden;
+	}
+}
+
+
+/* The wording for some sections were too big and passed their borders while resizing the page.
+Hence this media query.*/
+@media only screen and (min-width : 736px) and (max-width: 1036px){
+	html{
+		font-size: 12px;
+	} 
+} 
